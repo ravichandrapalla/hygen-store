@@ -12,6 +12,7 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-montserrat);
 }
 
 * {
@@ -70,6 +71,9 @@ a {
 }
 
 :root {
+  /* Font Family */
+  --font-sans: var(--font-montserrat);
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -144,5 +148,89 @@ a {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* === Headings === */
+  .heading-1 {
+    @apply text-[2.667rem] font-bold;
+  }
+
+  .heading-2 {
+    @apply text-[2.133rem] font-bold;
+  }
+
+  .heading-2-alt {
+    @apply text-[2.133rem] font-semibold;
+  }
+
+  .heading-3 {
+    @apply text-[1.6rem] font-bold;
+  }
+
+  .heading-3-alt {
+    @apply text-[1.6rem] font-semibold;
+  }
+
+  .heading-4 {
+    @apply text-[1.333rem] font-bold;
+  }
+
+  .heading-4-alt {
+    @apply text-[1.333rem] font-semibold;
+  }
+
+  .heading-5 {
+    @apply text-[1.067rem] font-bold;
+  }
+
+  .heading-5-alt {
+    @apply text-[1.067rem] font-semibold;
+  }
+
+  .heading-5-italic {
+    @apply text-[1.067rem] font-semibold italic;
+  }
+
+  .heading-6 {
+    @apply text-[0.933rem] font-bold;
+  }
+
+  .heading-6-alt {
+    @apply text-[0.933rem] font-semibold;
+  }
+
+  /* === Paragraphs === */
+  .paragraph-1 {
+    @apply text-[1.6rem] font-medium;
+  }
+
+  .paragraph-1-alt {
+    @apply text-[1.6rem] font-normal;
+  }
+
+  .paragraph-2 {
+    @apply text-[1.467rem] font-normal;
+  }
+
+  .paragraph-2-highlighted {
+    @apply text-[1.467rem] font-normal underline;
+  }
+
+  .paragraph-3 {
+    @apply text-[1.2rem] font-normal;
+  }
+
+  .paragraph-4 {
+    @apply text-[1.067rem] font-normal;
+  }
+
+  .paragraph-4-alt {
+    @apply text-[1.067rem] font-medium;
+  }
+
+  .paragraph-5 {
+    @apply text-[0.933rem] font-normal;
   }
 }
